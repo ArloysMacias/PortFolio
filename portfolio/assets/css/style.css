@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive|Roboto+Mono&display=swap');
+
+
+/******************---BOOSTRAP----*******--NAVBAR--**************/
+
+.bg-dark {
+    background-color: #00000000!important;
+}
+
+.navbar-nav{
+    margin-left: 20%;
+    font-size: 20px;
+}
+.navbar-nav li{
+    color: green;
+}
+
+/***************---BOOSTRAP---****---JUMBOTRON---***************/
+
+.jumbotron{
+    background-color: transparent;
+    opacity: 0.8;
+    font-size: 20rem;
+    font-weight: 13px;
+    color: rgba(235, 151, 96, 0.945);
+}
+.jumbotron h1{
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.jumbotron p{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+
+/****************----MINE------**************/
+
+#home{
+    background-image: url(../images/man-editada.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    margin-bottom: 0px;
+    z-index: 1;
+}
+
+
+
+
+.professional{
+    background-image: url()
+}
