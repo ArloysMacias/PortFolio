@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive|Roboto+Mono&display=swap');
 
-/******--HEADER--**************/
+                                
+                                
+                                /******--HEADER--**************/
+
+.header{
+    scroll-behavior: smooth;
+}
 
 #cover{
     height: 100vh;
@@ -18,10 +24,10 @@
     z-index: 1;
 }
 
-.transparent-background {
-  background-color: rgba(0,0,0, 0.6); 
+.transparent-background-cover {
+  background-color: rgba(0, 0, 0, 0.671); 
   position: absolute;
-  top: 50%;
+  top: 51%;
   left:50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -29,58 +35,46 @@
   height: 102vh;
 }
 
-/******************---BOOSTRAP----*******--NAVBAR--**************/
+.transparent-background-skills {
+  background-color: rgba(0, 0, 0, 0.253); 
+  position: absolute;
+  top: 51%;
+  left:30%;
+  transform: translate(-1%, -2%);
+  z-index: 2;
+  width: 100vw;
+  height: 102vh;
+}
+
+                        
+                        /******************---BOOSTRAP----*******--NAVBAR--**************/
 .navbar-nav{
     margin-left: 1%;
 }
 
+#overwritten-navba{
+    position: fixed;
+    z-index: 4;
+}
+
 #overwritten-navbar a{
-    color: rgb(94, 218, 94);
     font-size: 27px;
     font-weight: 500;
     letter-spacing: 2px;
     transform: 2s all;
 }
 
-/*
-.home{
-    background-color: rgba(67, 83, 83, 0.644);
-    color: #ffc107;
-}
-.profetional{
-    background-color: rgba(67, 83, 83, 0.644);
-    color: rgb(248, 246, 246);
-}
-.experience{
-    background-color: rgba(67, 83, 83, 0.644);
-    color: rgb(248, 246, 246);
-}
-.portfolio{
-    background-color: rgba(67, 83, 83, 0.644);
-    color: rgb(248, 246, 246);
-}
-.contact{
-    background-color: rgba(67, 83, 83, 0.644);
-    color: rgb(248, 246, 246);
-}
-
-*/
-
 .bg-dark {
     background-color: #47494b03!important;
 }
 
 #overwritten-navbar a:hover{
-    background-color: rgba(71, 71, 71, 0.363);
+    background-color: rgba(71, 71, 71, 0.2);
 }
 
+                            /***************---BOOSTRAP---****---JUMBOTRON---***************/
 
-
-
-/***************---BOOSTRAP---****---JUMBOTRON---***************/
-
-.jumbotron{
-    
+.jumbotron{   
     margin-left: 20px;
     margin-top: 90px;
 
@@ -93,24 +87,71 @@
 
     color: rgb(250, 245, 245);
     background-color: transparent;
-    opacity: 0.8;
-    
+    opacity: 0.8;   
 }
 
 .jumbotron h1{
     font-size: 24%;
-    font-weight: 300;
+    font-weight: bold;
 }
 
 .jumbotron p{
     margin-top: 20px;
     font-size: 30px;
     font-weight: 400;
-    color: rgb(94, 218, 94);
+    color: rgb(207, 161, 62);
+}
+
+                                /****************----MINE---Skills---**************/
+#professional{
+    height: 100vh;
+    width: 100vw;
+    
+    /*filter: blur(2px);*/
+    transform: translate(-1px,-2px);
+    
+    background-attachment: fixed;/*-para que no se mueva con el scroll-*/
+    background-image: url(../images/skills/buena.jpg);
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;/*-para que se ajuste al div -*/
+    z-index: 1;
+}
+
+.progress {
+    background: rgba(0, 0, 0, 0);
+    height: 18px;
+    animation: prog 2s linear;
+    margin-bottom: 30px;
+}
+.skill-name{
+    transform: translateY(-6px);
+    margin-bottom: 18px;
+    color: rgb(206, 205, 198);
+}
+.skill-name h3{
+    font-size: 25px;
+    font-family: "Roboto",sans-serif;
+    font-weight: 100px;
+}
+
+.bg-success{
+    background-color: rgb(177, 140, 61)!important;
+    border-radius: 7px;
+}
+@keyframes prog {
+    from {
+        width: 0%; 
+        }
+    to {
+        width: 100% ;
+        }
 }
 
 
-/****************----MINE------**************/
+
 
 
 
@@ -129,7 +170,7 @@ esta es la configuracion por defecto del tablet*/
 esta es la configuracion por defecto del mobil*/
 @media(max-width:767px){
     .container-jumbotron{
-        margin:0 auto;
+        margin:auto;
     }
     .jumbotron h1{
         font-size: 16%;
