@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive|Roboto+Mono&display=swap');
 
-                           
-
-
 /*****************************************--Images-*************************************/
 
 #mypicture{
+    position: relative;
+
+    height: 100vh;
+    width: 100vw;
+
     margin-left: auto;
     margin-right: auto;
     
@@ -23,10 +25,15 @@
 }
 
 #imagekeyboard{
+    position: absolute;
+
+    height: 180vh;
+    width: 100vw;
+
     margin-left: auto;
     margin-right: auto;
     
-    filter: blur(0,9px);
+    filter: blur(0,5px);
     
     background-attachment: fixed;/*-para que no se mueva con el scroll-*/
     background-image: url(../images/skills/buenafondo.jpg);
@@ -39,26 +46,23 @@
     z-index: 1;
 }
 
+/*****************************************--Transparent-*************************************/
 .transparent-background-cover {
-  background-color: rgba(0, 0, 0, 0.671); 
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  z-index: 2;
-  width: 70rem;
-  height: 40rem;
+    width:98.6vw;
+    height: 100vh;    
+    background-color: rgba(26, 53, 61, 0.5);
+    position: absolute;
+    z-index: 2;
+}
+.transparent-background-skills {
+    width:98.6vw;
+    height: 180vh;
+    background-size: 300px 100px;
+    background-color: rgba(26, 53, 61, 0.397);  
+    position: absolute;
+    z-index: 1;
 }
 
-.transparent-background-skills {
-  background-color: rgba(0, 0, 0, 0.253); 
-  position: absolute;
-  top: 51%;
-  left:30%;
-  transform: translate(-1%, -2%);
-  z-index: 2;
-  width: 100vw;
-  height: 102vh;
-}
                                 
  /*****************************************--Header-*************************************/
 
@@ -66,12 +70,9 @@
                         
 /*****************************************--NavBar-*************************************/
 .navbar-nav{
+    background-color:rgba(0, 0, 0, 0) ;
     margin-left: 1%;
-}
-
-#overwritten-navba{
-    position: fixed;
-    z-index: 4;
+    z-index: 3;
 }
 
 #overwritten-navbar a{
@@ -92,14 +93,10 @@
 /*****************************************--Presentation-*************************************/
 
 .presentation{   
-    padding: 0px;
-    margin-left: 20px;
-    margin-top: 90px;
-
+    margin-top: 10%;
     position: relative;
-    z-index: 1;
+    z-index: 3;
     
-    font-size: 20rem;
     font-weight: 40;
     text-align: center;
 
@@ -109,7 +106,7 @@
 }
 
 .presentation h1{
-    font-size: 24%;
+    font-size: 408%;
     font-weight: bold;
 }
 
@@ -121,13 +118,23 @@
 }
 
 /*****************************************--Skills-*************************************/
-
-.progress {
-    background: rgba(0, 0, 0, 0);
-    height: 18px;
-    animation: prog 2s linear;
-    margin-bottom: 30px;
+.header-skill{
+    text-align: center;
+    margin-top: 210px;
+    color: white;
+    font-family: Roboto, sans-serif;
 }
+.header-skill h1 {
+    color: white;
+    font-size: 355%;
+    font-weight: 400;
+}
+.header-skill p{
+    color: white;
+    font-size: 150%;
+    font-weight: 100;
+}
+
 .skill-name{
     transform: translateY(-6px);
     float: right;
@@ -141,7 +148,12 @@
     font-family: "Roboto",sans-serif;
     font-weight: 100px;
 }
-
+.progress {
+    background: rgba(0, 0, 0, 0);
+    height: 18px;
+    animation: prog 2s linear;
+    margin-bottom: 30px;
+}
 .bg-success{
     background-color: rgb(177, 140, 61)!important;
     border-radius: 7px;
@@ -160,10 +172,11 @@
 /*2do estilo  1er media create
 esta es la configuracion por defecto del tablet*/
 @media(max-width:991px){
-    .jumbotron h1{
-        font-size: 18%;
-    }
-    .jumbotron p{
+    .presentation h1 {
+    font-size: 508%;
+    font-weight: 400;
+}
+  .presentation p{
         size: 10px;
     }
 }
@@ -171,33 +184,26 @@ esta es la configuracion por defecto del tablet*/
 /*3er estilo    2do media create
 esta es la configuracion por defecto del mobil*/
 @media(max-width:767px){
-    .container-jumbotron{
+    .presentation{
         margin:auto;
     }
-    .jumbotron h1{
-        font-size: 16%;
+    .presentation h1 {
+    font-size: 488%;
     }
-    .jumbotron p{
+    .presentation p{
         size: 10px;
-    }
-
-    #image{
-        background-position-x: 15px; 
     }
 }
 
 @media(max-width:568px){
-    .container-jumbotron{
+    .presentation{
         margin:0 auto;
     }
-    .jumbotron h1{
-        font-size: 18%;
+    .presentation h1{
+        font-size: 408%;
     }
-    .jumbotron p{
+    .presentation p{
         size: 10px;
-    }
-    #image{
-        background-position-x: 16px; 
     }
 }
 
