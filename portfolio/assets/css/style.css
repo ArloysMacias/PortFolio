@@ -26,12 +26,10 @@
 
 #imagekeyboard{
     height: 180vh;
-    width: 100vw;
+    width: 96,7vw;
 
     margin-left: auto;
     margin-right: auto;
-    
-    filter: blur(0,5px);
     
     background-attachment: fixed;/*-para que no se mueva con el scroll-*/
     background-image: url(../images/skills/buenafondo.jpg);
@@ -114,7 +112,8 @@
 
 .presentation{   
     margin-top: 10%;
-    position: relative;
+    margin-left: 10%;
+    position: absolute;
     z-index: 3;
     
     font-weight: 40;
@@ -217,7 +216,7 @@ esta es la configuracion por defecto del mobil*/
         margin:auto;
     }
     .presentation h1 {
-    font-size: 488%;
+    font-size: 447%;
     }
     .presentation p{
         size: 10px;
@@ -229,7 +228,7 @@ esta es la configuracion por defecto del mobil*/
         margin:0 auto;
     }
     .presentation h1{
-        font-size: 408%;
+        font-size: 362%;
     }
     .presentation p{
         size: 10px;
