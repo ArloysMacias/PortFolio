@@ -25,8 +25,6 @@
 }
 
 #imagekeyboard{
-    position: absolute;
-
     height: 180vh;
     width: 100vw;
 
@@ -45,6 +43,29 @@
     
     z-index: 1;
 }
+#portfolio{
+    position: relative;
+
+    height: 180vh;
+    width: 100vw;
+
+    margin-left: auto;
+    margin-right: auto;
+    
+    filter: blur(0,5px);
+    
+    background-attachment: fixed;/*-para que no se mueva con el scroll-*/
+    background-image: url(../images/porfolio.jpg);
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;/*-para que se ajuste al div -*/
+    
+    z-index: 1;
+    
+}
+
 
 /*****************************************--Transparent-*************************************/
 .transparent-background-cover {
@@ -57,8 +78,7 @@
 .transparent-background-skills {
     width:98.6vw;
     height: 180vh;
-    background-size: 300px 100px;
-    background-color: rgba(26, 53, 61, 0.397);  
+    background-color: rgba(26, 53, 61, 0.609);  
     position: absolute;
     z-index: 1;
 }
@@ -118,6 +138,10 @@
 }
 
 /*****************************************--Skills-*************************************/
+.skill-wrapper{
+    position: absolute;
+    z-index: 2;
+}
 .header-skill{
     text-align: center;
     margin-top: 210px;
@@ -165,6 +189,11 @@
     to {
         width: 100% ;
         }
+}
+
+/*****************************************--Portfolio-*************************************/
+#portfolio{
+    background-image: url(../asset/images/porfolio.jpg)
 }
 
 /*****************************************--DesktopAproach-*************************************/
