@@ -82,18 +82,23 @@
 
 
                         
-/*****************************************--NavBar-*************************************/
+/*****************************************--NavBar-************Arreglarrrrr*************************/
+#overwritten-navbar{
+    position:fixed;
+    z-index:5;
+    
+}
+
 .navbar-nav{
-    background-color:rgba(0, 0, 0, 0) ;
+    background-color:rgba(0, 0, 0, 0.568) ;
     margin-left: 1%;
     z-index: 3;
 }
-
 #overwritten-navbar a{
     font-size: 27px;
     font-weight: 500;
     letter-spacing: 2px;
-    transform: 2s all;
+    transform: 2s all; 
 }
 
 .bg-dark {
