@@ -14,7 +14,7 @@
     filter: blur(0,9px);
     
     background-attachment: fixed;/*-para que no se mueva con el scroll-*/
-    background-image: url(../images/slate4.jpg);
+    background-image: url(../images/home/slate4.jpg);
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -49,7 +49,7 @@
     margin-right: auto;
     
     background-attachment: fixed;/*-para que no se mueva con el scroll-*/
-    background-image: url(../images/portfolio2.jpg);
+    background-image: url(../images/portfolio/portfolio2.jpg);
 
     /* Center and scale the image nicely */
     background-position: center;
