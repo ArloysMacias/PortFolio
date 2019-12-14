@@ -39,7 +39,7 @@ html, body {
 #experience{
     height: 100vh;
     width: 100vw;
-    background-image: url(../images/skills/buenafondo.jpg);
+    background-image: url(../images/ /buenafondo.jpg);
 }
 
 
@@ -176,189 +176,149 @@ html, body {
 
 /***********--Timeline-*****HELP FROM  https://bootsnipp.com/snippets/yGbV     ****************************/
 
-/*********-----container---********/
-.container-timeline {
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
   position: relative;
-  padding: 10px 10px 10px 50px;/* More space for the vertical line to the left */
-  
-  max-width: 320px;/* Width restriction if you want */
-
 }
-
-/***********------ vertical  line----**************/
-.container-timeline::before {
-  content: '';
-  width: 5px;
-  background-color: rgb(228, 147, 41);
-  position: absolute;
+.timeline:before {
   top: 0;
   bottom: 0;
-  left: 15px;
-}
-
-/***------container de las tarjetas----**** */
-div.contenedor-card-rigth {
-  padding: 10px 0;
-  position: relative;
-  width: 100%;
-}
-
-div.contenedor-card-left {
-  padding: 10px 0;
-  position: relative;
-  width: 100%;
-}
-
-/****---Donde va el contenido---*****/
-div.cards {
-  padding: 20px 30px;
-  background-color: #9fa5a5;
-  position: relative;
-  border-radius: 6px;
-}
-
-/* [THE DATE & TEXT] */
-strong.date {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #333;
-}
-
-/******* triangulo a la izquierda del contenedor *****/
-div.contenedor-card-rigth::before {
-  content: '';
-  border: 10px solid transparent;
-  border-right-color: #9fa5a5;
-  border-left: 0;
   position: absolute;
-  top: 20%;
-  left: -10px;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
 }
-
-/******* circulo despues (sobre) de la linea *****/
-div.contenedor-card-rigth::after {
-  content: ''; /**-Si no lo pongo no aparece-**/
-  background: #fff;
-  border: 4px solid rgb(222, 170, 26);
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  position: absolute;
-  top: 20%;
-  left: -42px;
-}
-
-/******* triangulo a la derecha de contenedor *****/
-div.contenedor-card-left::before {
-  content: '';
-  border: 10px solid transparent;
-  border-right-color: #9fa5a5;
-  border-left: 0;
-  position: absolute;
-  top: 20%;
-  left: -10px;
-}
-/******* circulo despues (sobre) de la linea *****/
-div.contenedor-card-left::after {
-  content: ''; /**-Si no lo pongo no aparece-**/
-  background: #fff;
-  border: 4px solid rgb(222, 170, 26);
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  position: absolute;
-  top: 20%;
-  left: -42px;
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-  .container-timeline::after {
-  left: 31px;
-  }
-  
-  /* Full-width containers */
-.contenedor-card {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
-  }
-
-
-/*********************--Codigo tomado y modificado de -https://www.w3schools.com/howto/howto_css_flip_card.asp--**************/
-  
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-}
-
-.flip-card-inner {
+.timeline > li {
+  margin-bottom: 20px;
   position: relative;
-  width: 100%;
-  height: 100%;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: 50%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+.timeline > li.timeline-inverted + li:not(.timeline-inverted),
+.timeline > li:not(.timeline-inverted) + li.timeline-inverted {
+margin-top: -60px;
+}
+
+.timeline > li:not(.timeline-inverted) {
+padding-right:90px;
+}
+
+.timeline > li.timeline-inverted {
+padding-left:90px;
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
   text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
 }
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
 }
-
-.flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
 }
-
-
-
-
-  /* Make sure that all arrows are pointing leftwards */
-  .contenedor-card::before {
-  left: 60px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-  }
-
-  /* Make sure all circles are at the same spot */
-  .contenedor-card-left::after, contenedor-card-rigth::after {
-  left: 15px;
-  }
-  
-  /* Make all right containers behave like the left ones */
-  .right {
-  left: 0%;
-  }
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
 }
-
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+.timeline-body > p + p {
+  margin-top: 5px;
+}
 
 
 /*****************************************--DesktopAproach-*************************************/
-/* Media queries - Responsive timeline on screens less than 600px wide */
-
-
-
-
 /*2do estilo  1er media create
-esta es la configuracion por defecto del tablet y menores*/
+esta es la configuracion por defecto del tablet*/
 @media(max-width:991px){
     .presentation h1 {
     font-size: 508%;
@@ -370,9 +330,8 @@ esta es la configuracion por defecto del tablet y menores*/
 }
 
 /*3er estilo    2do media create
-esta es la configuracion por defecto del mobil y menores*/
+esta es la configuracion por defecto del mobil*/
 @media(max-width:767px){
-
     .presentation{
         margin: 89px auto;
     }
@@ -383,10 +342,8 @@ esta es la configuracion por defecto del mobil y menores*/
         size: 10px;
     }
 }
-/*3er estilo    2do media create
-esta es la configuracion por defecto de los mas chiquitos*/
+
 @media(max-width:568px){
-    
     .presentation{
         margin: 89px auto;
     }
